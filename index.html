@@ -469,23 +469,32 @@
     // 1. ΒΑΣΙΚΕΣ ΡΥΘΜΙΣΕΙΣ ΕΦΑΡΜΟΓΗΣ
     // =========================================
 
-    const LOOKUP_URL = "https://script.google.com/macros/s/AKfycbzOp-9gQ9xMZtb7GxrLcWW_Nc5yrBu7KbmqDVYlI3s1GQ3wJhmOCfKyaoKgvTfttI2v/exec";
-    const JOTFORM_BASE_URL = "https://form.jotform.com/261090250858356";
+ const CONFIG = {
+  EVENT_TITLE: "ΕΠΙΔΑΥΡΟΣ 2026",
+  LOOKUP_URL: "https://script.google.com/macros/s/AKfycbzOp-9gQ9xMZtb7GxrLcWW_Nc5yrBu7KbmqDVYlI3s1GQ3wJhmOCfKyaoKgvTfttI2v/exec",
+  JOTFORM_BASE_URL: "https://form.jotform.com/261090250858356",
+  EVENT_LOGO: "https://github.com/jsamartzis-png/logos/blob/main/logo_EntryFlow_removebg-preview.png?raw=true",
+  EVENT_BACKGROUND: "background.jpg",
+  YEAR: "2026",
+  INFO_PHONE: "210 4101 113"
+};
 
-    const EVENT_LOGO = "https://github.com/jsamartzis-png/logos/blob/main/logo_EntryFlow_removebg-preview.png?raw=true";
-    const EVENT_BACKGROUND = "background.jpg";
-    const EVENT_TITLE = "ΕΠΙΔΑΥΡΟΣ 2026";
+const LOOKUP_URL = CONFIG.LOOKUP_URL;
+const JOTFORM_BASE_URL = CONFIG.JOTFORM_BASE_URL;
+const EVENT_LOGO = CONFIG.EVENT_LOGO;
+const EVENT_BACKGROUND = CONFIG.EVENT_BACKGROUND;
+const EVENT_TITLE = CONFIG.EVENT_TITLE;
 
     const EVENT_NOTES = [
   "Με τη χρήση αυτής της εφαρμογής, μπορείτε εύκολα να υποβάλετε τα απαραίτητα έγγραφα και να ολοκληρώσετε την πληρωμή του παραβόλου (όλα σε ένα σημείο).",
   'Διαβάστε την <a href="https://docs.google.com/document/d/1_ThpUPcy-w1-D5hScVCcKZ2csmjs6_m-mIkEYNY9c5I/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Πολιτική Απορρήτου</a> και τους <a href="https://docs.google.com/document/d/1Btn0eMNSZotVyH3n7RETC3ur8lZ4V_2I/edit?usp=sharing&ouid=115039995651229449950&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Όρους Χρήσης</a>.'
 ];
 
-    const NOTICE_YEAR_TEXT =
-      "Για να συνεχίσετε θα πρέπει να έχετε πιστοποιητικό της Εθνικής Αρχής για το έτος 2026.";
+ const NOTICE_YEAR_TEXT =
+  "Για να συνεχίσετε θα πρέπει να έχετε πιστοποιητικό της Εθνικής Αρχής για το έτος " + CONFIG.YEAR + ".";
 
-    const NOTICE_INFO_TEXT =
-      "Για πληροφορίες: ΓΡΑΜΜΑΤΕΙΑ ΑΓΩΝΑ ΤΗΛ.: 210 4101 113";
+const NOTICE_INFO_TEXT =
+  "Για πληροφορίες: ΓΡΑΜΜΑΤΕΙΑ ΑΓΩΝΑ ΤΗΛ.: " + CONFIG.INFO_PHONE;
 
     // =========================================
     // 2. UNIQUE NAMES ΤΗΣ JOTFORM
