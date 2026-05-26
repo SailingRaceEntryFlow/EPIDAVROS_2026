@@ -441,7 +441,7 @@
           Για πληροφορίες: ΓΡΑΜΜΑΤΕΙΑ ΑΓΩΝΑ ΤΗΛ.: 210 4101 114
         </div>
       </div>
-<div id="startPage">
+
       <div class="search-area">
         <input type="text" id="sailNumber" placeholder="Αριθμός ιστίου" inputmode="numeric" />
         <button class="btn" id="searchBtn" type="button">ΑΝΑΖΗΤΗΣΗ</button>
@@ -457,7 +457,7 @@
         <button class="btn" id="continueBtn" type="button">ΣΥΝΕΧΕΙΑ ΣΤΗ ΣΥΜΜΕΤΟΧΗ</button>
         <button class="btn secondary" id="newSearchBtn" type="button">ΝΕΑ ΑΝΑΖΗΤΗΣΗ</button>
       </div>
-</div>
+
       <div class="form-wrap" id="formWrap">
         <iframe id="formFrame" src="" title="Καταχώριση συμμετοχής"></iframe>
       </div>
@@ -528,7 +528,7 @@ const NOTICE_INFO_TEXT =
     const actions = document.getElementById("actions");
     const formWrap = document.getElementById("formWrap");
     const formFrame = document.getElementById("formFrame");
-const startPage = document.getElementById("startPage");
+
     let lastFoundData = null;
 
     function scrollToElement(el) {
@@ -669,7 +669,7 @@ setStatus("Η αναζήτηση ολοκληρώθηκε.");
       }
     }
 
-function continueToForm() {
+   function continueToForm() {
   if (!lastFoundData) {
     setStatus("Δεν υπάρχουν στοιχεία για συνέχεια.", true, false, true);
     return;
@@ -678,24 +678,27 @@ function continueToForm() {
   const formUrl = buildPrefillUrl(lastFoundData);
   formFrame.src = formUrl;
 
-  startPage.style.display = "none";
+  document.querySelector(".hero").style.display = "none";
+  document.querySelector(".separator").style.display = "none";
+  document.getElementById("eventTitle").style.display = "none";
+  document.querySelector(".notice-box").style.display = "none";
+  document.querySelector(".search-area").style.display = "none";
+  statusBox.style.display = "none";
+  resultCard.style.display = "none";
+  actions.style.display = "none";
+
   formWrap.style.display = "block";
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-   function resetSearch() {
-  sailInput.value = "";
-  setStatus("");
-  hideResult();
-
-  startPage.style.display = "block";
-  formWrap.style.display = "none";
-  formFrame.src = "";
-
-  sailInput.focus();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+    function resetSearch() {
+      sailInput.value = "";
+      setStatus("");
+      hideResult();
+      sailInput.focus();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
     setupHero();
 
