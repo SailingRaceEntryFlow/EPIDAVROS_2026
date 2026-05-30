@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+statusBox.innerHTML =<!DOCTYPE html>
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
@@ -475,15 +475,13 @@
   JOTFORM_BASE_URL: "https://form.jotform.com/261339003690352",
   EVENT_LOGO: "https://github.com/jsamartzis-png/logos/blob/main/logo_EntryFlow_removebg-preview.png?raw=true",
   EVENT_BACKGROUND: "background.jpg",
-   CLUB_LOGO: "CLUB_LOGO: "https://drive.google.com/thumbnail?id=1QBClPMT1pi88Sf9e8ZNpXqGmAnWqd4Mu&sz=w1000",",
   YEAR: "2026",
-  INFO_PHONE: "210 4101 113 - 114"
+  INFO_PHONE: "210 4101 113"
 };
 
 const LOOKUP_URL = CONFIG.LOOKUP_URL;
 const JOTFORM_BASE_URL = CONFIG.JOTFORM_BASE_URL;
 const EVENT_LOGO = CONFIG.EVENT_LOGO;
-    const CLUB_LOGO = CONFIG.CLUB_LOGO;
 const EVENT_BACKGROUND = CONFIG.EVENT_BACKGROUND;
 const EVENT_TITLE = CONFIG.EVENT_TITLE;
     const FORM_OPEN = false;
@@ -715,21 +713,17 @@ setStatus("Η αναζήτηση ολοκληρώθηκε.");
   const statusBox = document.getElementById("status");
   statusBox.style.display = "block";
   statusBox.innerHTML =
-  '<div style="text-align:center; margin-bottom:30px;">' +
-  '<img src="' + EVENT_LOGO + '" style="max-width:220px; max-height:110px;">' +
-  '</div>' +
+    '<div style="color:#0d5e92; font-size:28px; font-weight:700; text-align:center; margin-bottom:24px;">' +
+    EVENT_TITLE +
+    '</div>' +
+    '<div style="color:#b00020; font-size:22px; text-align:center;">' +
+    CLOSED_MESSAGE +
+    '<br><br>Για πληροφορίες επικοινωνήστε με τη Γραμματεία Αγώνα Τηλ. 2104101114.' +
+    '</div>';
 
-  '<div style="color:#0d5e92; font-size:28px; font-weight:700; text-align:center; margin-bottom:24px;">' +
-  EVENT_TITLE +
-  '</div>' +
+  statusBox.style.fontSize = "22px";
+  statusBox.style.marginTop = "60px";
 
-  '<div style="color:#b00020; font-size:22px; text-align:center;">' +
-  CLOSED_MESSAGE +
-  '<br><br>Για πληροφορίες επικοινωνήστε με τη Γραμματεία Αγώνα Τηλ. 2104101114.' +
-  '</div>';
-
-statusBox.style.fontSize = "22px";
-statusBox.style.marginTop = "150px";
   throw new Error("FORM_CLOSED");
 }
 
