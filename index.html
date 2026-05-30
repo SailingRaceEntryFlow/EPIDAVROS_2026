@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="el">
 <head>
   <meta charset="UTF-8" />
@@ -703,7 +703,7 @@ setStatus("Η αναζήτηση ολοκληρώθηκε.");
     }
 
     setupHero();
-    if (FORM_OPEN === false) {
+if (FORM_OPEN === false) {
   document.querySelector(".hero").style.display = "none";
   document.querySelector(".separator").style.display = "none";
   document.getElementById("eventTitle").style.display = "none";
@@ -726,7 +726,6 @@ setStatus("Η αναζήτηση ολοκληρώθηκε.");
 
   throw new Error("FORM_CLOSED");
 }
-
     searchBtn.addEventListener("click", searchBoat);
     continueBtn.addEventListener("click", continueToForm);
     newSearchBtn.addEventListener("click", resetSearch);
