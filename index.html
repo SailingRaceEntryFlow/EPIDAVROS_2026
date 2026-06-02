@@ -610,7 +610,7 @@ function formatForJotformNumber(v) {
 
   if (isNaN(num)) return "";
 
-  return num.toFixed(1).replace(".", ",");
+return num.toFixed(3).replace(".", ",");
 }
 function buildPrefillUrl(data) {
   const params = new URLSearchParams();
