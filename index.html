@@ -518,7 +518,8 @@ const NOTICE_INFO_TEXT =
       aph_dh: "typeA412",
       last_certificate: "typeA426",
       special_cat: "typeA437",
-      aph_initial: "typeA439"
+      aph_initial: "typeA439",
+      dynamic_allowance: "dynamic_allowance"
     };
 
     const sailInput = document.getElementById("sailNumber");
@@ -631,6 +632,10 @@ function buildPrefillUrl(data) {
   params.set(fieldNames.last_certificate, data.certdate_last || "");
   params.set(fieldNames.special_cat, data.special_category || "");
   params.set(fieldNames.aph_initial, formatForJotformNumber(data.aph_initial));
+  params.set(
+  fieldNames.dynamic_allowance,
+  formatForJotformNumber(data.dynamic_allowance)
+);
 
   return JOTFORM_BASE_URL + "?" + params.toString();
 }
