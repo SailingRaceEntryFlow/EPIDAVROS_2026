@@ -519,7 +519,8 @@ const NOTICE_INFO_TEXT =
       last_certificate: "typeA426",
       special_cat: "typeA437",
       aph_initial: "typeA439",
-      dynamic_allowance: "dynamic_allowance"
+     dynamic_allowance: "dynamic_allowance",
+orc_class_check: "typeA514"
     };
 
     const sailInput = document.getElementById("sailNumber");
@@ -636,7 +637,7 @@ function buildPrefillUrl(data) {
   fieldNames.dynamic_allowance,
   formatForJotformNumber(data.dynamic_allowance)
 );
-
+params.set(fieldNames.orc_class_check, data.orc_class_check || "");
   return JOTFORM_BASE_URL + "?" + params.toString();
 }
 
